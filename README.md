@@ -3,6 +3,9 @@ Lazealthy (Lazy + Healthy) A tool &amp; App which helps lazy or busy people to b
 
 (Based on theory of the TV program: [Horizon: The Truth About Exercise](https://movie.douban.com/subject/24844982/)  )
 
+![TheoryChart](/theorychart.png)
+
+
 This tool set is planned to include 
 
 + Apps on Mobile (TV?)
