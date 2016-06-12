@@ -15,9 +15,9 @@ Features:
 + Guide for Light & Easy sport;
 + Social Network feature.
 
-Main User Roles:
+Main User Roles (People want to be healthy without much hard sports):
 
-+ Lazy people, who does not want to do much hard sport at the beginning; 
++ Lazy people, who does not want to do much hard sport *at the beginning*; 
 + Busy people, who does not have much time to do much sport;
 + IT people, who sits in front of a computer for hours per day;
 + Pregnant Woman, need some light & proper sport a day.
