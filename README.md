@@ -6,8 +6,7 @@ Lazealthy (Lazy + Healthy) A tool &amp; App which helps lazy or busy people to b
 This tool set is planned to include Apps on Mobile (TV?), Desktop for Computer, Web for Management/Weixin Pub Account.
 
 Features:
-*. Time Notice for Light & Easy sport；
 
-*. Guide for Light & Easy sport;
-
-*. Social Network feature.
++ Time Notice for Light & Easy sport；
++ Guide for Light & Easy sport;
++ Social Network feature.
