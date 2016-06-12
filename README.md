@@ -3,6 +3,9 @@ Lazealthy (Lazy + Healthy) A tool &amp; App which helps lazy or busy people to b
 
 (Based on theory of the TV program: [Horizon: The Truth About Exercise](https://movie.douban.com/subject/24844982/)  )
 
+![TheoryChart](/theorychart.png)
+
+
 This tool set is planned to include 
 
 + Apps on Mobile (TV?)
@@ -14,3 +17,11 @@ Features:
 + Time Notice for Light & Easy sport；
 + Guide for Light & Easy sport;
 + Social Network feature.
+
+Main User Roles (People want to be healthy without much hard sports):
+
++ Lazy people, who does not want to do much hard sport *at the beginning*; 
++ Busy people, who does not have much time to do much sport;
++ IT people, who sits in front of a computer for hours per day;
++ Pregnant Woman, need some light & proper sport a day.
+
