@@ -9,7 +9,7 @@ Lazealthy (Lazy + Healthy) A tool &amp; App which helps lazy or busy people to b
 This tool set is planned to include 
 
 + Apps on Mobile (TV?)
-+ Desktop for Computer
++ Desktop for Computer ( Desktop Form / Chrome Add-on / UWApp )
 + Web for Management/Weixin Pub Account.
 
 Features:
