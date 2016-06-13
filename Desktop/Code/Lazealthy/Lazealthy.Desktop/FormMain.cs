@@ -45,7 +45,6 @@ namespace Lazealthy.Desktop
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
-                ShowDeskTop();
                 Hide();
             }
         }
