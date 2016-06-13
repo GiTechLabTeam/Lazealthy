@@ -39,6 +39,7 @@
             this.timerNotifier = new System.Windows.Forms.Timer(this.components);
             this.labelMessage = new System.Windows.Forms.Label();
             this.labelTimerCounter = new System.Windows.Forms.Label();
+            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripLazealthy.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,9 +61,10 @@
             this.aboutToolStripMenuItem,
             this.startNotifierToolStripMenuItem,
             this.stopNotifierToolStripMenuItem,
+            this.configurationToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripLazealthy.Name = "contextMenuStripLazealthy";
-            this.contextMenuStripLazealthy.Size = new System.Drawing.Size(153, 114);
+            this.contextMenuStripLazealthy.Size = new System.Drawing.Size(149, 114);
             // 
             // aboutToolStripMenuItem
             // 
@@ -117,11 +119,18 @@
             this.labelTimerCounter.TabIndex = 2;
             this.labelTimerCounter.Text = "00:00:00";
             // 
+            // configurationToolStripMenuItem
+            // 
+            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.configurationToolStripMenuItem.Text = "Configuration";
+            this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 167);
+            this.ClientSize = new System.Drawing.Size(372, 73);
             this.Controls.Add(this.labelTimerCounter);
             this.Controls.Add(this.labelMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -150,6 +159,7 @@
         private System.Windows.Forms.Timer timerNotifier;
         private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.Label labelTimerCounter;
+        private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
     }
 }
 

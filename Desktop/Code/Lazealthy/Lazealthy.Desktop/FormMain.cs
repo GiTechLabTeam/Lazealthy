@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Configuration;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,7 @@ namespace Lazealthy.Desktop
         {
             int.TryParse(ConfigurationManager.AppSettings["NotifierIntervalMinute"].ToString(), out _ConfiguredIntervalMinute);
             _TimerCount = _ConfiguredIntervalMinute * 60;
+            this.labelTimerCounter.Text = GetCurrentTimeCount(_TimerCount);
             this.notifyIconLazealthy.Text = startNotifier?"Lazealthy is running.": "Lazealthy stopped.";
             this.startNotifierToolStripMenuItem.Enabled = !startNotifier;
             this.stopNotifierToolStripMenuItem.Enabled = startNotifier;
@@ -34,6 +36,15 @@ namespace Lazealthy.Desktop
                 this.timerNotifier.Start();
             else
                 this.timerNotifier.Stop();
+        }
+
+        private string GetCurrentTimeCount(int timeCount)
+        {
+            var currentSecond = timeCount % 60;
+            var currentMinute = timeCount / 60;
+            var currentHour = currentMinute / 60;
+            var currentMinuteShow = currentMinute % 60;
+            return currentHour.ToString().PadLeft(2, '0') + ":" + currentMinuteShow.ToString().PadLeft(2, '0') + ":" + currentSecond.ToString().PadLeft(2, '0');
         }
 
         public FormMain()
@@ -62,12 +73,8 @@ namespace Lazealthy.Desktop
 
         private void timerNotifier_Tick(object sender, EventArgs e)
         {
-            _TimerCount--;            
-            var currentSecond = _TimerCount % 60;
-            var currentMinute = _TimerCount / 60;
-            var currentHour = currentMinute / 60;
-            var currentMinuteShow = currentMinute % 60;
-            this.labelTimerCounter.Text = currentHour.ToString().PadLeft(2, '0') + ":" + currentMinuteShow.ToString().PadLeft(2, '0') + ":" + currentSecond.ToString().PadLeft(2, '0');
+            _TimerCount--;                       
+            this.labelTimerCounter.Text = GetCurrentTimeCount(_TimerCount);
             if (_TimerCount <= 0)
             {
                 stopNotifierToolStripMenuItem_Click(null, null);
@@ -100,13 +107,25 @@ namespace Lazealthy.Desktop
         private void startNotifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetUIStatus(true);
-
         }
 
         private void stopNotifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetUIStatus(false);
+        }
 
+        private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Reflection.Assembly asm = System.Reflection.Assembly.GetExecutingAssembly();
+            var configurationFolder = asm.Location.Substring(0, asm.Location.LastIndexOf(@"\")) + @"\";
+            if (Directory.Exists(configurationFolder))
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start("Explorer.exe", configurationFolder);
+                }
+                catch { }
+            }
         }
     }
 }
