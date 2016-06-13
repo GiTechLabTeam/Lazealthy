@@ -14,9 +14,21 @@ namespace Lazealthy.Desktop
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSetting());
+            bool flag = false;
+            string processName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+            System.Diagnostics.Process[] processesLazealthy = System.Diagnostics.Process.GetProcessesByName(processName);
+            bool processCountValidFlag = (processesLazealthy != null && processesLazealthy.Length <= 1);
+            System.Threading.Mutex mutex = new System.Threading.Mutex(true, processName, out flag);
+            if (!flag || !processCountValidFlag)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new FormMain());
+            }
         }
     }
 }
