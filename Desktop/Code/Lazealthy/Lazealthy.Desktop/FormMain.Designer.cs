@@ -35,11 +35,11 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startNotifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopNotifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timerNotifier = new System.Windows.Forms.Timer(this.components);
             this.labelMessage = new System.Windows.Forms.Label();
             this.labelTimerCounter = new System.Windows.Forms.Label();
-            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStripLazealthy.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,28 +69,35 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // startNotifierToolStripMenuItem
             // 
             this.startNotifierToolStripMenuItem.Name = "startNotifierToolStripMenuItem";
-            this.startNotifierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.startNotifierToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.startNotifierToolStripMenuItem.Text = "Start Notifier";
             this.startNotifierToolStripMenuItem.Click += new System.EventHandler(this.startNotifierToolStripMenuItem_Click);
             // 
             // stopNotifierToolStripMenuItem
             // 
             this.stopNotifierToolStripMenuItem.Name = "stopNotifierToolStripMenuItem";
-            this.stopNotifierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stopNotifierToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.stopNotifierToolStripMenuItem.Text = "Stop Notifier";
             this.stopNotifierToolStripMenuItem.Click += new System.EventHandler(this.stopNotifierToolStripMenuItem_Click);
+            // 
+            // configurationToolStripMenuItem
+            // 
+            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.configurationToolStripMenuItem.Text = "Configuration";
+            this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -119,13 +126,6 @@
             this.labelTimerCounter.TabIndex = 2;
             this.labelTimerCounter.Text = "00:00:00";
             // 
-            // configurationToolStripMenuItem
-            // 
-            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.configurationToolStripMenuItem.Text = "Configuration";
-            this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +137,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormMain";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lazealthy";
             this.TopMost = true;
