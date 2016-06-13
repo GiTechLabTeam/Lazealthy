@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Lazealthy.Desktop
 {
-    public partial class Form1 : Form
+    public partial class FormSetting : Form
     {
-        public Form1()
+        public FormSetting()
         {
             InitializeComponent();
         }

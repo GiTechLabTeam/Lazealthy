@@ -1,6 +1,6 @@
 ﻿namespace Lazealthy.Desktop
 {
-    partial class Form1
+    partial class FormSetting
     {
         /// <summary>
         /// Required designer variable.
