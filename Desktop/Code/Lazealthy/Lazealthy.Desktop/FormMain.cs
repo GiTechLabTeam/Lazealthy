@@ -33,9 +33,14 @@ namespace Lazealthy.Desktop
             this.startNotifierToolStripMenuItem.Enabled = !startNotifier;
             this.stopNotifierToolStripMenuItem.Enabled = startNotifier;
             if (startNotifier)
+            {
                 this.timerNotifier.Start();
+                this.notifyIconLazealthy.ShowBalloonTip(3000);
+            }
             else
+            {
                 this.timerNotifier.Stop();
+            }
         }
 
         private string GetCurrentTimeCount(int timeCount)
@@ -90,8 +95,8 @@ namespace Lazealthy.Desktop
         private void FormSetting_Load(object sender, EventArgs e)
         {
             SetUIStatus(true);
+            this.WindowState = FormWindowState.Minimized;
             Hide();
-            //this.WindowState = FormWindowState.Minimized;
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
