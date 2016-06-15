@@ -84,7 +84,7 @@ namespace Lazealthy.Desktop
             {
                 stopNotifierToolStripMenuItem_Click(null, null);
                 ShowDeskTop();
-                DialogResult dr = MessageBox.Show(this, "Have a break and click Yes to start a new round.", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show(this, "Stand up and have a break and click Yes to start a new round.", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
                 {
                     startNotifierToolStripMenuItem_Click(null, null);
