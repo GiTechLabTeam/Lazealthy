@@ -17,6 +17,9 @@ namespace Lazealthy.Desktop
         private int _TimerCount = 0;
         private int _ConfiguredIntervalMinute = 40;
 
+        /// <summary>
+        /// It seems that this method does not work in Windows 10.
+        /// </summary>
         private void ShowDeskTop()
         {
             Type shellType = Type.GetTypeFromProgID("Shell.Application");

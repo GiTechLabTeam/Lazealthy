@@ -64,40 +64,40 @@
             this.configurationToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.contextMenuStripLazealthy.Name = "contextMenuStripLazealthy";
-            this.contextMenuStripLazealthy.Size = new System.Drawing.Size(149, 114);
+            this.contextMenuStripLazealthy.Size = new System.Drawing.Size(156, 114);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // startNotifierToolStripMenuItem
             // 
             this.startNotifierToolStripMenuItem.Name = "startNotifierToolStripMenuItem";
-            this.startNotifierToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.startNotifierToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.startNotifierToolStripMenuItem.Text = "Start Notifier";
             this.startNotifierToolStripMenuItem.Click += new System.EventHandler(this.startNotifierToolStripMenuItem_Click);
             // 
             // stopNotifierToolStripMenuItem
             // 
             this.stopNotifierToolStripMenuItem.Name = "stopNotifierToolStripMenuItem";
-            this.stopNotifierToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.stopNotifierToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.stopNotifierToolStripMenuItem.Text = "Stop Notifier";
             this.stopNotifierToolStripMenuItem.Click += new System.EventHandler(this.stopNotifierToolStripMenuItem_Click);
             // 
             // configurationToolStripMenuItem
             // 
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -110,7 +110,7 @@
             // 
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMessage.Location = new System.Drawing.Point(23, 22);
+            this.labelMessage.Location = new System.Drawing.Point(23, 20);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(218, 26);
             this.labelMessage.TabIndex = 1;
@@ -120,7 +120,7 @@
             // 
             this.labelTimerCounter.AutoSize = true;
             this.labelTimerCounter.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimerCounter.Location = new System.Drawing.Point(247, 22);
+            this.labelTimerCounter.Location = new System.Drawing.Point(247, 20);
             this.labelTimerCounter.Name = "labelTimerCounter";
             this.labelTimerCounter.Size = new System.Drawing.Size(86, 26);
             this.labelTimerCounter.TabIndex = 2;
@@ -128,9 +128,9 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 73);
+            this.ClientSize = new System.Drawing.Size(372, 67);
             this.Controls.Add(this.labelTimerCounter);
             this.Controls.Add(this.labelMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -141,6 +141,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lazealthy";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FormSetting_Load);
             this.Resize += new System.EventHandler(this.FormSetting_Resize);
             this.contextMenuStripLazealthy.ResumeLayout(false);
