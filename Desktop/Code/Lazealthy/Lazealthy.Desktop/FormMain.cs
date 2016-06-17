@@ -17,6 +17,21 @@ namespace Lazealthy.Desktop
         private int _TimerCount = 0;
         private int _ConfiguredIntervalMinute = 40;
 
+        string NotificationMessage
+        {
+            get
+            {
+                try
+                {
+                    return ConfigurationManager.AppSettings["NotificationMessage"].ToString().Replace("\\r\\n", System.Environment.NewLine);
+                }
+                catch
+                {
+                    return "Stand up and have a break and click Yes to start a new round.";
+                }
+            }
+        }
+
         /// <summary>
         /// It seems that this method does not work in Windows 10.
         /// </summary>
@@ -87,7 +102,7 @@ namespace Lazealthy.Desktop
             {
                 stopNotifierToolStripMenuItem_Click(null, null);
                 ShowDeskTop();
-                DialogResult dr = MessageBox.Show(this, "Stand up and have a break and click Yes to start a new round.", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dr = MessageBox.Show(this, NotificationMessage, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
                 {
                     startNotifierToolStripMenuItem_Click(null, null);
