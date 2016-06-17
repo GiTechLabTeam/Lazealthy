@@ -106,7 +106,8 @@ namespace Lazealthy.Desktop
         {
             MessageBox.Show(this,
                             "Lazealthy (Lazy + Healthy) is a tool & App which helps lazy or busy people to be healthy." + System.Environment.NewLine + System.Environment.NewLine +
-                            "Why not stop sitting like a potato? Stand up to have something to drink!",
+                            "Why not stop sitting like a potato? Stand up to have something to drink!" + System.Environment.NewLine + System.Environment.NewLine +
+                            "Author: Yang SHEN",
                             "About Lazealthy",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
