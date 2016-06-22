@@ -12,6 +12,9 @@ using System.Windows.Forms;
 
 namespace Lazealthy.Desktop
 {
+    //https://github.com/praeclarum/sqlite-net
+    //https://github.com/praeclarum/sqlite-net/wiki
+
     public partial class FormMain : Form
     {
         private int _TimerCount = 0;
