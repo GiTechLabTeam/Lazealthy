@@ -16,6 +16,7 @@ namespace Lazealthy.Desktop
     {
         private int _TimerCount = 0;
         private int _ConfiguredIntervalMinute = 40;
+        private int _ShowDesktop = 1;
 
         string NotificationMessage
         {
@@ -37,13 +38,17 @@ namespace Lazealthy.Desktop
         /// </summary>
         private void ShowDeskTop()
         {
-            Type shellType = Type.GetTypeFromProgID("Shell.Application");
-            object shellObject = System.Activator.CreateInstance(shellType);
-            shellType.InvokeMember("ToggleDesktop", System.Reflection.BindingFlags.InvokeMethod, null, shellObject, null);
+            if (_ShowDesktop > 0)
+            {
+                Type shellType = Type.GetTypeFromProgID("Shell.Application");
+                object shellObject = System.Activator.CreateInstance(shellType);
+                shellType.InvokeMember("ToggleDesktop", System.Reflection.BindingFlags.InvokeMethod, null, shellObject, null);
+            }
         }
 
         private void SetUIStatus(bool startNotifier)
         {
+            int.TryParse(ConfigurationManager.AppSettings["ShowDesktop"].ToString(), out _ShowDesktop);
             int.TryParse(ConfigurationManager.AppSettings["NotifierIntervalMinute"].ToString(), out _ConfiguredIntervalMinute);
             _TimerCount = _ConfiguredIntervalMinute * 60;
             this.labelTimerCounter.Text = GetCurrentTimeCount(_TimerCount);

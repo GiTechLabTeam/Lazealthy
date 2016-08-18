@@ -26,7 +26,7 @@
     <ProductName>Lazealthy</ProductName>
     <PublisherName>Healthy Kit</PublisherName>
     <SuiteName>Lazealthy</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
